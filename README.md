@@ -225,8 +225,8 @@ For comparison, we use the results reported by [OmniDocBench](https://github.com
 <td>0.641</td>
 </tr>
 <tr>
-<td rowspan="10">Expert VLMs</td>
-<td>POINTS-Reader-3B</td>
+<td rowspan="11">Expert VLMs</td>
+<td><strong style="color: green;">POINTS-Reader-3B</strong></td>
 <td>0.133</td>
 <td>0.212</td>
 <td>0.062</td>
