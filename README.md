@@ -593,9 +593,9 @@ prompt = (
 image_path = '/path/to/your/local/image'
 model_path = 'tencent/POINTS-Reader'
 model = AutoModelForCausalLM.from_pretrained(model_path,
-                                                    trust_remote_code=True,
-                                                    torch_dtype=torch.float16,
-                                                    device_map='cuda')
+                                             trust_remote_code=True,
+                                             torch_dtype=torch.float16,
+                                             device_map='cuda')
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 image_processor = Qwen2ImageProcessorForPOINTSV15.from_pretrained(model_path)
 content = [
