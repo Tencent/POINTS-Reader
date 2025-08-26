@@ -37,7 +37,7 @@ We are delighted to announce that the WePOINTS family has welcomed a new member:
 
 ## Results
 
-We take the following results from [OmniDocBench](https://github.com/opendatalab/OmniDocBench/tree/main) and POINTS-Reader for comparison:
+For comparison, we use the results reported by [OmniDocBench](https://github.com/opendatalab/OmniDocBench/tree/main) and POINTS-Reader. Compared with the version submitted to EMNLP 2025, the current release provides (1) improved performance and (2) support for Chinese documents. Both enhancements build upon the methods proposed in this paper.
 
 <table style="width: 92%; margin: auto; border-collapse: collapse;">
 <thead>
