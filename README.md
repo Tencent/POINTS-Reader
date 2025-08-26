@@ -633,9 +633,9 @@ We will create a Pull Request to SGLang, please stay tuned.
 
 ## Known Issues
 
-- **Complex Document Parsing**: POINTS-Reader is prone to issues like repeation and missing content, when provided with complex documents, such as newspaper.
-- **Handwriiten Documents Parsing**: POINTS-Reader is also prone to issues when provided with handwritten documents, such as receipts and notes.
-- **Multi-language Documents Parsing**: POINTS-Reader currently only supports English and Chinese documents.
+- **Complex Document Parsing**: POINTS-Reader can struggle with complex layouts (e.g., newspapers), often producing repeated or missing content.
+- **Handwritten Document Parsing**: It also has difficulty handling handwritten inputs (e.g., receipts, notes), which can lead to recognition errors or omissions.
+- **Multi-language Document Parsing**: POINTS-Reader currently supports only English and Chinese, limiting its effectiveness on other languages.
 
 ## Citation
 
@@ -645,7 +645,7 @@ If you use this model in your work, please cite the following paper:
 @article{points-reader,
   title={POINTS-Reader: Distillation-Free Adaptation of Vision-Language Models for Document Conversion},
   author={Liu, Yuan and Zhongyin Zhao and Tian, Le and Haicheng Wang and Xubing Ye and Yangxiu You and Zilin Yu and Chuhan Wu and  Zhou, Xiao and Yu, Yang and Zhou, Jie},
-  journal={},
+  journal={EMNLP2025},
   year={2025}
 }
 
