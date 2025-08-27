@@ -22,6 +22,7 @@ We are delighted to announce that the WePOINTS family has welcomed a new member:
 
 ## News
 
+- 2025.08.27: Support deploying POINTS-Reader with SGLang💪💪💪.
 - 2025.08.26: We released the weights of the most recent version of POINT-Reader🔥🔥🔥.
 - 2025.08.21: POINTS-Reader is accepted by **EMNLP 2025** for presentation at the **Main Conference**🎉🎉🎉.
 
@@ -620,7 +621,118 @@ If you encounter issues like repeation, please try to increase the resolution of
 
 ### Deploy with SGLang
 
-We will create a Pull Request to SGLang, please stay tuned.
+We have created a [Pull Request](https://github.com/sgl-project/sglang/pull/9651) for SGLang. You can check out this branch and install SGLang in editable mode by following the [official guide](https://docs.sglang.ai/get_started/install.html) prior to the merging of this PR.
+
+#### How to Deploy
+
+You can deploy POINTS-Reader with SGLang using the following command:
+
+```
+python3 -m sglang.launch_server \
+--model-path tencent/POINTS-Reader \
+--tp-size 1 \
+--dp-size 1 \
+--chat-template points-v15-chat \
+--trust-remote-code \
+--port 8081
+```
+
+#### How to Use
+
+You can use the following code to obtain results from SGLang:
+
+```python
+
+from typing import List
+import requests
+import json
+
+
+
+def call_wepoints(messages: List[dict],
+                 temperature: float = 0.0,
+                 max_new_tokens: int = 2048,
+                 repetition_penalty: float = 1.05,
+                 top_p: float = 0.8,
+                 top_k: int = 20,
+                 do_sample: bool = True,
+                 url: str = 'http://127.0.0.1:8081/v1/chat/completions') -> str:
+    """Query WePOINTS model to generate a response.
+
+    Args:
+        messages (List[dict]): A list of messages to be sent to WePOINTS. The
+            messages should be the standard OpenAI messages, like:
+            [
+                {
+                    'role': 'user',
+                    'content': [
+                        {
+                            'type': 'text',
+                            'text': 'Please describe this image in short'
+                        },
+                        {
+                            'type': 'image_url',
+                            'image_url': {'url': /path/to/image.jpg}
+                        }
+                    ]
+                }
+            ]
+        temperature (float, optional): The temperature of the model.
+            Defaults to 0.0.
+        max_new_tokens (int, optional): The maximum number of new tokens to generate.
+            Defaults to 2048.
+        repetition_penalty (float, optional): The penalty for repetition.
+            Defaults to 1.05.
+        top_p (float, optional): The top-p probability threshold.
+            Defaults to 0.8.
+        top_k (int, optional): The top-k sampling vocabulary size.
+            Defaults to 20.
+        do_sample (bool, optional): Whether to use sampling or greedy decoding.
+            Defaults to True.
+        url (str, optional): The URL of the WePOINTS model.
+            Defaults to 'http://127.0.0.1:8081/v1/chat/completions'.
+
+    Returns:
+        str: The generated response from WePOINTS.
+    """
+    data = {
+        'model': 'WePoints',
+        'messages': messages,
+        'max_new_tokens': max_new_tokens,
+        'temperature': temperature,
+        'repetition_penalty': repetition_penalty,
+        'top_p': top_p,
+        'top_k': top_k,
+        'do_sample': do_sample,
+    }
+    response = requests.post(url,
+                             json=data)
+    response = json.loads(response.text)
+    response = response['choices'][0]['message']['content']
+    return response
+
+prompt = (
+    'Please extract all the text from the image with the following requirements:\n'
+    '1. Return tables in HTML format.\n'
+    '2. Return all other text in Markdown format.'
+)
+
+messages = [{
+              'role': 'user',
+              'content': [
+                  {
+                      'type': 'text',
+                      'text': prompt
+                  },
+                  {
+                      'type': 'image_url',
+                      'image_url': {'url': '/path/to/image.jpg'}
+                  }
+              ]
+            }]
+response = call_wepoints(messages)
+print(response)
+```
 
 ## Known Issues
 
