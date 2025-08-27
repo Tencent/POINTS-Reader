@@ -561,7 +561,7 @@ This following code snippet has been tested with following environment:
 ```
 python==3.10.12
 torch==2.5.1
-transformers==4.46.1
+transformers==4.55.2
 cuda==12.1
 ```
 
@@ -569,17 +569,8 @@ If you encounter environment issues, please feel free to open an issue.
 
 ### Run with Transformers
 
-Before you run the following code, make sure you install the `WePOINTS` package by running:
-
-```
-git clone https://github.com/WePOINTS/WePOINTS.git
-cd WePOINTS
-pip install -e.
-```
-
 ```python
-from wepoints.utils.images import Qwen2ImageProcessorForPOINTSV15
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, Qwen2VLImageProcessor
 import torch
 
 
@@ -597,7 +588,7 @@ model = AutoModelForCausalLM.from_pretrained(model_path,
                                              torch_dtype=torch.float16,
                                              device_map='cuda')
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
-image_processor = Qwen2ImageProcessorForPOINTSV15.from_pretrained(model_path)
+image_processor = Qwen2VLImageProcessor.from_pretrained(model_path)
 content = [
             dict(type='image', image=image_path),
             dict(type='text', text=prompt)
