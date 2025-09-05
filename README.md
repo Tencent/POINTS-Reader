@@ -10,7 +10,7 @@ POINTS-Reader: Distillation-Free Adaptation of Vision-Language Models for Docume
   <a href="https://huggingface.co/tencent/POINTS-Reader">
     <img src="https://img.shields.io/badge/HuggingFace%20Weights-black.svg?logo=HuggingFace" alt="HuggingFace">
   </a>
-  <a href="">
+  <a href="https://arxiv.org/abs/2509.01215">
     <img src="https://img.shields.io/badge/arXiv__-POINTS--Reader-d4333f?logo=arxiv&logoColor=white&colorA=cccccc&colorB=d4333f&style=flat" alt="arXiv">
   </a>
   <a href="">
@@ -554,6 +554,24 @@ For comparison, we use the results reported by [OmniDocBench](https://github.com
 </tr>
 </tbody>
 </table>
+
+## Examples
+
+### Single Column with Latex Formula
+
+![Example 1](images/example_1.png)
+
+### Single Column with Table
+
+![Example 2](images/example_2.png)
+
+### Multi-column with Latex Formula
+
+![Example 3](images/example_3.png)
+
+### Multi-column with Table
+
+![Example 4](images/example_4.png)
 
 ## Getting Started
 
