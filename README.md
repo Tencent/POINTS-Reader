@@ -26,6 +26,10 @@ We are delighted to announce that the WePOINTS family has welcomed a new member:
 - 2025.08.26: We released the weights of the most recent version of POINT-Reader🔥🔥🔥.
 - 2025.08.21: POINTS-Reader is accepted by **EMNLP 2025** for presentation at the **Main Conference**🎉🎉🎉.
 
+## TODO
+
+- Support inference demo.
+
 ## Introduction
 
 1. **Simplicity**: POINTS-Reader is a very streamlined model that fully follows the structure of POINTS1.5, except that we have replaced Qwen2.5-7B-Instruct with Qwen2.5-3B-Instruct. Moreover, the input and output of POINTS-Reader are extremely straightforward. The input consists of a fixed prompt and a document image, and the output contains only a string (text extracted from the document image). The model's output is the final result delivered to the user without any post-processing.
@@ -587,6 +591,14 @@ cuda==12.1
 If you encounter environment issues, please feel free to open an issue.
 
 ### Run with Transformers
+
+Please first install [WePOINTS](https://github.com/WePOINTS/WePOINTS) using the following command:
+
+```sh
+git clone https://github.com/WePOINTS/WePOINTS.git
+cd ./WePOINTS
+pip install -e .
+```
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer, Qwen2VLImageProcessor
