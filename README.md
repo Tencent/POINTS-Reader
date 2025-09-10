@@ -588,6 +588,14 @@ If you encounter environment issues, please feel free to open an issue.
 
 ### Run with Transformers
 
+Please first install [WePOINTS](https://github.com/WePOINTS/WePOINTS) using the following command:
+
+```sh
+git clone https://github.com/WePOINTS/WePOINTS.git
+cd ./WePOINTS
+pip install -e .
+```
+
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer, Qwen2VLImageProcessor
 import torch
