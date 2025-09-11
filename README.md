@@ -8,12 +8,15 @@ POINTS-Reader: Distillation-Free Adaptation of Vision-Language Models for Docume
 
 <p align="center">
   <a href="https://huggingface.co/tencent/POINTS-Reader">
-    <img src="https://img.shields.io/badge/HuggingFace%20Weights-black.svg?logo=HuggingFace" alt="HuggingFace">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97_HuggingFace-Model-ffbd45.svg" alt="HuggingFace">
   </a>
-  <a href="https://arxiv.org/abs/2509.01215">
-    <img src="https://img.shields.io/badge/arXiv__-POINTS--Reader-d4333f?logo=arxiv&logoColor=white&colorA=cccccc&colorB=d4333f&style=flat" alt="arXiv">
+  <a href="https://huggingface.co/spaces/prithivMLmods/POINTS-Reader-OCR">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97_HuggingFace-Demo-90EE90?style=flat" alt="Demo">
   </a>
-  <a href="">
+  <a href="https://huggingface.co/papers/2509.01215">
+    <img src="https://img.shields.io/badge/Paper-POINTS--Reader-d4333f?logo=arxiv&logoColor=white&colorA=cccccc&colorB=d4333f&style=flat" alt="Paper">
+  </a>
+  <a href="https://komarev.com/ghpvc/?username=tencent&repo=POINTS-Reader&color=brightgreen&label=Views" alt="view">
     <img src="https://komarev.com/ghpvc/?username=tencent&repo=POINTS-Reader&color=brightgreen&label=Views" alt="view">
   </a>
 </p>
@@ -22,6 +25,7 @@ We are delighted to announce that the WePOINTS family has welcomed a new member:
 
 ## News
 
+- 2025.09.11: A live [demo](https://huggingface.co/spaces/prithivMLmods/POINTS-Reader-OCR) of POINTS-Reader is now available on Hugging Face Spaces, thanks to a wonderful contribution from @prithivsakthiur.
 - 2025.08.27: Support deploying POINTS-Reader with SGLang💪💪💪.
 - 2025.08.26: We released the weights of the most recent version of POINT-Reader🔥🔥🔥.
 - 2025.08.21: POINTS-Reader is accepted by **EMNLP 2025** for presentation at the **Main Conference**🎉🎉🎉.
