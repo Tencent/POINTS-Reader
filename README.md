@@ -25,6 +25,7 @@ We are delighted to announce that the WePOINTS family has welcomed a new member:
 
 ## News
 
+- 2025.09.12: Quick Start with Transformers🤗: [Colab Notebook](https://github.com/PRITHIVSAKTHIUR/Multimodal-Outpost-Notebooks/blob/main/tencent-POINTS-Reader/tencent_POINTS_Reader.ipynb)
 - 2025.09.11: A live [demo](https://huggingface.co/spaces/prithivMLmods/POINTS-Reader-OCR) of POINTS-Reader is now available on Hugging Face Spaces, thanks to a wonderful contribution from @prithivsakthiur.
 - 2025.08.27: Support deploying POINTS-Reader with SGLang💪💪💪.
 - 2025.08.26: We released the weights of the most recent version of POINT-Reader🔥🔥🔥.
