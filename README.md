@@ -771,6 +771,10 @@ print(response)
 - **Handwritten Document Parsing**: It also has difficulty handling handwritten inputs (e.g., receipts, notes), which can lead to recognition errors or omissions.
 - **Multi-language Document Parsing**: POINTS-Reader currently supports only English and Chinese, limiting its effectiveness on other languages.
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Tencent/POINTS-Reader&type=Date)](https://www.star-history.com/#Tencent/POINTS-Reader&Date)
+
 ## Citation
 
 If you use this model in your work, please cite the following paper:
