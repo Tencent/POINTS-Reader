@@ -780,10 +780,11 @@ print(response)
 If you use this model in your work, please cite the following paper:
 
 ```
-@article{points-reader,
+@inproceedings{liu2025points,
   title={POINTS-Reader: Distillation-Free Adaptation of Vision-Language Models for Document Conversion},
-  author={Liu, Yuan and Zhongyin Zhao and Tian, Le and Haicheng Wang and Xubing Ye and Yangxiu You and Zilin Yu and Chuhan Wu and  Zhou, Xiao and Yu, Yang and Zhou, Jie},
-  journal={EMNLP2025},
+  author={Liu, Yuan and Zhao, Zhongyin and Tian, Le and Wang, Haicheng and Ye, Xubing and You, Yangxiu and Yu, Zilin and Wu, Chuhan and Xiao, Zhou and Yu, Yang and others},
+  booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},
+  pages={1576--1601},
   year={2025}
 }
 
